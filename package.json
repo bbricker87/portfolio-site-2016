@@ -1,0 +1,19 @@
+{
+  "name": "ben-bricker-2016",
+  "version": "1.0.0",
+  "description": "Redesign of ben-bricker.com portfolio website.  Learning to use ReactJS as well for the front end behavior.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbricker87/portfolio-site-2016.git"
+  },
+  "author": "Ben Bricker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbricker87/portfolio-site-2016/issues"
+  },
+  "homepage": "https://github.com/bbricker87/portfolio-site-2016#readme"
+}

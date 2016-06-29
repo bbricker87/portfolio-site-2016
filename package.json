@@ -1,10 +1,11 @@
 {
   "name": "ben-bricker-2016",
-  "version": "0.1.0",
-  "description": "Creating a portfolio website using ReactJS",
+  "version": "1.0.0",
+  "description": "Updating my portfolio site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base app --inline --hot"
   },
   "repository": {
     "type": "git",
@@ -17,13 +18,22 @@
   },
   "homepage": "https://github.com/bbricker87/portfolio-site-2016#readme",
   "dependencies": {
-    "react": "^15.1.0",
-    "webpack": "^1.13.1"
-  },
-  "devDependencies": {
-    "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
+    "babel-plugin-transform-class-properties": "^6.10.2",
     "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.11.1"
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {},
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ]
   }
 }

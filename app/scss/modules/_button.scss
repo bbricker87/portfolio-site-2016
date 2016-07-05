@@ -1,0 +1,42 @@
+//-------------------------------------
+// Button
+//-------------------------------------
+
+.button {
+  padding: 0.5em 2em;
+  border: 0.1em solid $off-white;
+  @include transition(background-color 500ms, border-color 500ms, color 500ms);
+
+  &:focus, &:active {
+    outline: none;
+  }
+
+  &--primary {
+    background-color: $orange;
+    color: $off-white;
+
+    &:focus {
+      background-color: $light-orange;
+    }
+
+    &:hover {
+      background-color: $light-orange;
+      color: $charcoal;
+    }
+  }
+
+  &--teal {
+    background-color: $teal;
+    color: $off-white;
+
+    &:hover {
+      background-color: $light-teal;
+      color: $charcoal;
+    }
+  }
+
+  &--form{
+    display: block;
+    width: 100%;
+  }
+}

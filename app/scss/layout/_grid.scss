@@ -1,0 +1,255 @@
+@charset 'utf-8';
+
+// - - css-grid-system
+// builds a css grid based on variables
+
+// -------------------------------------
+// Variables
+// -------------------------------------
+
+$columns: 24;
+$column-width: 4.166666666;
+
+$container-xxl: 119rem;
+$container-xl: 79rem;
+$container-lg: 63rem;
+$container-md: 47rem;
+$container-sm: 100%;
+
+$xl-screen: 120.07em;
+$xl-screen: 80em;
+$lg-screen: 64em;
+$md-screen: 48em;
+$sm-screen: 30em;
+$xs-screen: 20em;
+
+// -------------------------------------
+// Mixins
+// -------------------------------------
+
+@mixin clearfix(){
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex-wrap($value: nowrap) {
+  // No Webkit Box fallback.
+  -webkit-flex-wrap: $value;
+  -moz-flex-wrap: $value;
+  @if $value == nowrap {
+    -ms-flex-wrap: none;
+  } @else {
+    -ms-flex-wrap: $value;
+  }
+  flex-wrap: $value;
+}
+
+// -------------------------------------
+// Building Grid
+// -------------------------------------
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.container {
+  padding: 0 0.5rem;
+  margin: 1rem auto;
+  position: relative;
+  width: $container-sm;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  max-width: $container-sm;
+  @include clearfix();
+}
+
+[class*="col"]{
+  float: left;
+  display: inline;
+  min-height: 1px;
+  position: relative;
+  margin: 0;
+  padding: 0.25rem;
+}
+
+.center-col {
+  display: block;
+  float: none;
+  clear: both;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
+
+.equal-height {
+  @include flexbox();
+  @include flex-wrap(wrap);
+}
+
+
+@for $i from 1 through $columns {
+  .col-xs-#{$i} {
+    $colWidth: 1% * ($column-width * $i);
+    width: calc(#{$colWidth} - 10px);
+    margin: 5px;
+  }
+}
+@media (min-width: $sm-screen) {
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  @for $i from 1 through $columns {
+    .col-sm-#{$i} {
+      $colWidth: 1% * ($column-width * $i);
+      width: calc(#{$colWidth} - 10px);
+      margin: 5px;
+    }
+  }
+
+  .hidden-sm-and-up {
+    display: none;
+  }
+}
+@media (min-width: $md-screen) {
+
+  .container {
+    padding: 0;
+    width: $container-md;
+    margin: 2rem auto;
+  }
+
+  .row {
+    max-width: $container-md;
+  }
+
+  @for $i from 1 through $columns {
+    .col-md-#{$i} {
+      $colWidth: 1% * ($column-width * $i);
+      width: calc(#{$colWidth} - 10px);
+      margin: 5px;
+    }
+  }
+
+  .hidden-md-and-up {
+    display: none;
+  }
+}
+@media (min-width: $lg-screen) {
+
+  .container {
+    width: $container-lg;
+    margin: 3rem auto;
+  }
+
+  .row {
+    max-width: $container-lg;
+  }
+
+  @for $i from 1 through $columns {
+    .col-lg-#{$i} {
+      $colWidth: 1% * ($column-width * $i);
+      width: calc(#{$colWidth} - 20px);
+      margin: 10px;
+    }
+  }
+
+  .hidden-lg-and-up {
+    display: none;
+  }
+}
+@media (min-width: $xl-screen) {
+
+  .container {
+    width: $container-xl;
+  }
+
+  .row {
+    max-width: $container-xl;
+  }
+
+  @for $i from 1 through $columns {
+    .col-xl-#{$i} {
+      $colWidth: 1% * ($column-width * $i);
+      width: calc(#{$colWidth} - 20px);
+      margin: 10px;
+    }
+  }
+
+  .hidden-xl {
+    display: none;
+  }
+}
+@media (min-width: $xxl-screen) {
+
+  .container {
+    width: $container-xxl;
+  }
+
+  .row {
+    max-width: $container-xxl;
+  }
+
+  @for $i from 1 through $columns {
+    .col-xxl-#{$i} {
+      $colWidth: 1% * ($column-width * $i);
+      width: calc(#{$colWidth} - 20px);
+      margin: 10px;
+    }
+  }
+
+  .hidden-xxl {
+    display: none;
+  }
+}
+
+@media (max-width: $xxl-screen - (1/1000)em){
+  .hidden-xl-and-down {
+    display: none;
+  }
+}
+
+@media (max-width: $xl-screen - (1/1000)em){
+  .hidden-lg-and-down {
+    display: none;
+  }
+}
+
+@media (max-width: $lg-screen - (1/1000)em){
+  .hidden-md-and-down {
+    display: none;
+  }
+}
+
+@media (max-width: $md-screen - (1/1000)em){
+  .hidden-sm-and-down {
+    display: none;
+  }
+}
+
+@media (max-width: $sm-screen - (1/1000)em){
+  .hidden-xs {
+    display: none;
+  }
+}

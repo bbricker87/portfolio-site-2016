@@ -1,0 +1,32 @@
+//-------------------------------------
+// Navigation
+//-------------------------------------
+
+.nav {
+  @include flexbox();
+  list-style: none;
+
+  &--home {
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+
+    @media (min-width: $md-screen){
+      @include flex-wrap(no-wrap);
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    &--home {
+      @include flex(1 0 100%);
+
+      @media (min-width: $sm-screen){
+        @include flex(1 0 50%);
+      }
+      @media (min-width: $md-screen){
+        @include flex(1 0 25%);
+      }
+    }
+  }
+}

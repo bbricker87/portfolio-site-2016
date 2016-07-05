@@ -1,0 +1,50 @@
+//-------------------------------------
+// Footer
+//-------------------------------------
+
+.footer {
+  margin: 0 auto;
+  padding: 0.5em;
+
+  @media (min-width: $md-screen) {
+    padding: 2em 0;
+  }
+
+  &__title {
+    color: $tan;
+    font-size: 4.75em;
+    margin: 0;
+  }
+}
+
+.contact-detail {
+  margin-bottom: 1.5em;
+
+    &__title {
+      margin: 0;
+    }
+    &__text {
+      margin-left: 1em;
+    }
+}
+
+.form {
+
+  &__input {
+    width: 100%;
+    margin-bottom: 1em;
+    border: 0.1em solid $teal;
+
+    &:focus {
+      border-color: $orange;
+    }
+    &:hover {
+      border-color: $light-orange;
+    }
+  }
+
+  &__textarea {
+    height: 8.75em;
+    resize: vertical;
+  }
+}

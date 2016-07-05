@@ -1,0 +1,35 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - settings
+// global maps and variables
+$charcoal: #575757;
+$white: #fff;
+$off-white: #E0E0E0;
+$tan: #B5ADA6;
+$teal: #426670;
+$dark-teal: #334E59;
+$light-teal: #598f9e;
+$orange: #ED6F5E;
+$light-orange: #ff8170;
+
+$body-font: 'Slabo 27px', sans-serif;
+$header-font: 'Passion One', gobold, impact, sans-serif;
+
+$xl-font-size: 1.5rem;
+$lg-font-size: 1.25rem;
+$md-font-size: 1.15rem;
+$sm-font-size: 1rem;
+$xs-font-size: 0.85rem;
+
+$xxl-screen: 120.07em;
+$xl-screen: 80em;
+$lg-screen: 64em;
+$md-screen: 48em;
+$sm-screen: 30em;
+$xs-screen: 20em;
+
+$nav-width: 60px;
+
+@font-face {
+  font-family: gobold;
+  src: url("/carriage-house-grav/user/themes/carriagehouse/fonts/GoboldRegular.ttf");
+}

@@ -1,0 +1,80 @@
+//-------------------------------------
+// Header
+//-------------------------------------
+
+body {
+  overflow-x: hidden;
+}
+
+.header-container {
+  position: relative;
+  margin: 0;
+  padding: 0.5em 0;
+  background-color: $dark-teal;
+
+  @media(min-width: $md-screen) {
+    height: 6em;
+    padding: 0;
+    background: transparent;
+  }
+}
+
+.header {
+  position: relative;
+  text-align: center;
+
+  &__title {
+
+    color: $orange;
+    margin: 0;
+    line-height: 0.85;
+
+        @media(min-width: $md-screen) {
+          position: absolute;
+          color: $dark-teal;
+          margin: 0;
+          line-height: inherit;
+        }
+
+
+    &--page {
+
+        @media(min-width: $md-screen) {
+          top: -0.33em;
+          left: 0;
+          font-size: 7.5em;
+        }
+        @media(min-width: $lg-screen) {
+          font-size: 8em;
+        }
+        @media(min-width: $xl-screen) {
+          font-size: 10em;
+        }
+        @media(min-width: $xxl-screen) {
+          font-size: 14em;
+        }
+    }
+    &--site {
+
+      color: $tan;
+
+      @media(min-width: $md-screen) {
+        color: $dark-teal;
+        line-height: 0;
+        top: 2.4em;
+        right: -2.125em;
+        font-size: 4em;
+        @include transform(rotate(-90deg));
+      }
+      @media(min-width: $lg-screen) {
+        font-size: 5em;
+      }
+      @media(min-width: $xl-screen) {
+        font-size: 7em;
+      }
+      @media(min-width: $xxl-screen) {
+        font-size: 10em;
+      }
+    }
+  }
+}

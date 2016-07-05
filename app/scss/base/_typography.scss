@@ -1,0 +1,66 @@
+// - - - - - - - - - - - - - - - - - - -
+// - - typography
+// global typography styles
+
+$base-line-height: 1.2;
+$base-font-size: 1.25rem;
+$vertical-rhythm: $base-line-height * $base-font-size;
+
+html {
+  font-size: 100%;
+}
+
+body{
+  font-size: $xs-font-size;
+  line-height: $base-line-height;
+  @include body-font();
+
+  @media screen and (min-width: $sm-screen) {
+    font-size: $sm-font-size;
+  }
+  @media screen and (min-width: $md-screen) {
+    font-size: $md-font-size;
+  }
+  @media screen and (min-width: $lg-screen) {
+    font-size: $lg-font-size;
+  }
+  @media screen and (min-width: $xl-screen) {
+    font-size: $xl-font-size;
+  }
+}
+p {
+  font-size: 1.25em; // Base font size
+  margin-top: 0;
+  margin-bottom: 1.875rem; // Base vertical spacing: (1.5 * 1.25) = 1.875
+}
+h1, h2, h3, h4, h5, h6 {
+  @include header-font();
+  margin-top: ($vertical-rhythm * 2);
+}
+h1{
+  font-size: 4em;
+  margin-bottom: ($vertical-rhythm * 2); // Double the base value for a larger gap (1.875 * 2) = 3.75
+}
+h2{
+  font-size: 3em;
+  margin-bottom: $vertical-rhythm;
+}
+h3{
+  font-size: 2.5em;
+  margin-bottom: $vertical-rhythm;
+}
+h4{
+  font-size: 2em;
+  margin-bottom: $vertical-rhythm;
+}
+h5{
+  font-size: 1.75em;
+  margin-bottom: $vertical-rhythm;
+}
+h6{
+  font-size: 1.5em;
+  margin-bottom: $vertical-rhythm;
+}
+.page-container {
+  padding: ($vertical-rhythm * 2) 2rem; // 3.5 is double the base value
+}

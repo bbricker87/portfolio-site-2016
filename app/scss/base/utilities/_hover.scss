@@ -1,0 +1,25 @@
+.underline-from-center {
+  position: relative;
+  padding: 0 0 0.1em;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 0.1em;
+    left: 50%;
+    right: 50%;
+    background-color: $orange;
+    visibility: hidden;
+    @include transition(all 500ms);
+  }
+
+  &:hover {
+
+    &::before {
+      left: 0;
+      right: 0;
+      visibility: visible;
+    }
+  }
+}

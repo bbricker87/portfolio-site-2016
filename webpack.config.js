@@ -5,7 +5,7 @@ var path = require('path');
 module.exports = {
   context: path.join(__dirname, "app"),
   devtool: debug ? "inline-sourcemap" : null,
-  entry: "./js/client.jsx",
+  entry: "./js/client.js",
   module: {
     loaders: [
       {
@@ -16,12 +16,16 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-0'],
           plugins: ['transform-class-properties']
         }
+      },
+      {
+        test: /\.scss$/,
+        loaders: ["style", "css", "sass"]
       }
     ]
   },
   output: {
     path: __dirname + "/app/",
-    filename: "client.min.js"
+    filename: "bundle.js"
   },
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),

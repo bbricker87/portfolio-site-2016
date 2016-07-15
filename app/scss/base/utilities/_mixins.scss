@@ -19,7 +19,6 @@
 }
 @mixin header-font(){
   font-family: $header-font;
-  text-transform: uppercase;
   font-weight: normal;
 }
 @mixin border-radius($property){

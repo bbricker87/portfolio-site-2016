@@ -1,6 +1,6 @@
 import React from "react";
 
-import Title from "./Title.jsx";
+import Title from "./title";
 
 export default function(props) {
   return(

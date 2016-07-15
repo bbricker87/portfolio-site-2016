@@ -4,8 +4,10 @@
 
 .landing {
   text-align: center;
+  padding: 2em;
 
   @media (min-width: $md-screen) {
+    padding: inherit;
     margin-top: 0.25em;
   }
 
@@ -35,5 +37,9 @@
     .icon-link__icon {
       fill: white;
     }
+  }
+
+  @media (min-width: $md-screen) {
+    margin: inherit;
   }
 }

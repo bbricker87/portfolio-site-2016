@@ -1,0 +1,48 @@
+//-------------------------------------
+// Skills
+//-------------------------------------
+
+.skills-carousel {
+
+}
+
+.skills-info {
+  padding: 1em;
+  background-color: $off-white;
+  border: 0.5em solid $dark-teal;
+
+  > div:last-child {
+    margin-bottom: 0;
+  }
+
+  &__property {
+    margin-bottom: 1em;
+  }
+
+  &__label {
+    color: $charcoal;
+    height: 1.5em;
+    font-size: 1.25em;
+    margin: 0;
+  }
+  &__bar {
+    width: 100%;
+
+    &__fill {
+      width: 0;
+      min-width: 22.5%;
+      padding: 0.5em;
+      color: $charcoal;
+      background-color: $dark-teal;
+      @include header-font();
+      @include transition(width 1.5s);
+
+      @media (min-width: $sm-screen) {
+        min-width: 18%;
+      }
+      @media (min-width: $md-screen) {
+        min-width: 12.5%;
+      }
+    }
+  }
+}

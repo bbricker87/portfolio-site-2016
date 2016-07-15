@@ -16,6 +16,12 @@ $container-lg: 63rem;
 $container-md: 47rem;
 $container-sm: 100%;
 
+$small-container-xxl: 100rem;
+$small-container-xl: 65rem;
+$small-container-lg: 54rem;
+$small-container-md: 40rem;
+$small-container-sm: 100%;
+
 $xl-screen: 120.07em;
 $xl-screen: 80em;
 $lg-screen: 64em;
@@ -69,6 +75,10 @@ img {
   margin: 1rem auto;
   position: relative;
   width: $container-sm;
+
+  &--small {
+    width: $small-container-sm;
+  }
 }
 
 .clearfix {
@@ -98,7 +108,6 @@ img {
   clear: both;
   margin-left: auto !important;
   margin-right: auto !important;
-  text-align: center;
 }
 
 .equal-height {
@@ -138,6 +147,10 @@ img {
     padding: 0;
     width: $container-md;
     margin: 2rem auto;
+
+    &--small {
+      width: $small-container-md;
+    }
   }
 
   .row {
@@ -161,6 +174,10 @@ img {
   .container {
     width: $container-lg;
     margin: 3rem auto;
+
+    &--small {
+      width: $small-container-lg;
+    }
   }
 
   .row {
@@ -183,6 +200,10 @@ img {
 
   .container {
     width: $container-xl;
+
+    &--small {
+      width: $small-container-xl;
+    }
   }
 
   .row {
@@ -205,6 +226,10 @@ img {
 
   .container {
     width: $container-xxl;
+
+    &--small {
+      width: $small-container-xxl;
+    }
   }
 
   .row {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Nav from './NavHome';
+import Nav from '../Nav/nav';
 
 export default function(props) {
   return(
@@ -8,7 +8,7 @@ export default function(props) {
       <div className="landing container">
         <img className="landing__image" src="https://placehold.it/750x750"/>
       </div>
-      <Nav />
+      <Nav pages={props.pages} home={true}/>
     </div>
   );
 };

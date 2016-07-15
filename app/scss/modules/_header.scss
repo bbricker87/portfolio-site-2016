@@ -32,6 +32,7 @@ body {
         @media(min-width: $md-screen) {
           position: absolute;
           color: $dark-teal;
+          text-transform: uppercase;
           margin: 0;
           line-height: inherit;
         }
@@ -70,10 +71,10 @@ body {
         font-size: 5em;
       }
       @media(min-width: $xl-screen) {
-        font-size: 7em;
+        font-size: 5.75em;
       }
       @media(min-width: $xxl-screen) {
-        font-size: 10em;
+        font-size: 7.75em;
       }
     }
   }

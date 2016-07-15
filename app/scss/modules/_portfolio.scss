@@ -1,0 +1,122 @@
+//-------------------------------------
+// Portfolio
+//-------------------------------------
+
+.portfolio {
+  background-color: $charcoal;
+
+  > div {
+    &:nth-child(3n+1) {
+      background-color: $medium-grey;
+    }
+    &:nth-child(3n+2) {
+      background-color: $off-white;
+    }
+    &:nth-child(3n+3) {
+      background-color: $tan;
+    }
+  }
+
+  &__project {
+    background-color: $off-white;
+  }
+
+  &--links{
+    @include flexbox();
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    margin: 1em auto;
+    padding: 0 1em;
+    max-width: $small-container-sm;
+
+    @media(min-width: $md-screen){
+      max-width: $small-container-md;
+      padding: 0;
+      margin: 3em auto;
+    }
+    @media(min-width: $lg-screen){
+      max-width: $small-container-lg;
+    }
+    @media(min-width: $xl-screen){
+      max-width: $small-container-xl;
+    }
+  }
+}
+
+.project {
+  color: $charcoal;
+  margin: 0 auto;
+  padding: 2em 1em;
+  max-width: $small-container-sm;
+
+  @media(min-width: $md-screen){
+    padding: 3em 0;
+    max-width: $small-container-md;
+  }
+  @media(min-width: $lg-screen){
+    max-width: $small-container-lg;
+  }
+  @media(min-width: $xl-screen){
+    max-width: $small-container-xl;
+  }
+
+  &__title, &__subtitle, &__date {
+    margin: 0;
+    line-height: 1;
+  }
+  &__title {
+    text-align: center;
+    @media(min-width: $md-screen){
+      text-align: left;
+    }
+  }
+  &__subtitle, &__date {
+    color: $dark-teal;
+  }
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 0.25em;
+
+    @media(min-width: $md-screen){
+      text-align: right;
+    }
+  }
+  &__date {
+    text-align: center;
+    @media(min-width: $md-screen){
+      text-align: left;
+    }
+  }
+  &__description {
+
+  }
+
+  &__image {
+
+    &--logo {
+      height: 100%;
+
+      > img {
+        object-fit: scale-down;
+        height: 100%;
+      }
+    }
+  }
+
+  &--link {
+    height: 10em;
+    padding: 1em;
+    margin: 0.15em 0;
+    @include flex(1 0 100%);
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    background-color: $off-white;
+    border: 0.25em solid $dark-teal;
+
+    @media (min-width: $sm-screen) {
+      margin: 0.15em;
+      @include flex(1 0 calc(50% - 0.3em));
+    }
+  }
+}

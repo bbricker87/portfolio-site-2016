@@ -1,0 +1,25 @@
+//-------------------------------------
+// About
+//-------------------------------------
+.about {
+    &__avatar {
+        text-align: center;
+
+        > img {
+          @include border-radius(50%);
+        }
+    }
+
+    &__information {
+        margin: 2em auto;
+        padding: 2em 2em 1em;
+        background-color: $off-white;
+        color: $charcoal;
+        @include box-shadow(5px 5px 10px $charcoal);
+        > p {
+            &:first-child {
+                font-size: 1.35em;
+            }
+        }
+    }
+}

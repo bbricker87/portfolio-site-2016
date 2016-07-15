@@ -1,0 +1,102 @@
+//-------------------------------------
+// Carousel
+//-------------------------------------
+
+.carousel {
+    @include flexbox();
+    @include justify-content(space-around);
+    @include align-items(center);
+    background-color: $off-white;
+    padding: 1em;
+    margin: 0 auto;
+    border: 0.5em solid $dark-teal;
+
+    @media (min-width: $md-screen) {
+      padding: 1em 0.25em;
+    }
+
+    &__button {
+      display: none;
+
+      &--previous {
+        float: left;
+      }
+      &--next {
+        float: right;
+      }
+
+      @media (min-width: $md-screen) {
+        display: inline-block;
+        width: 4em;
+        height: 4em;
+        fill: $orange;
+        cursor: pointer;
+        @include transition(fill 500ms);
+
+        &:hover{
+          fill: $light-orange;
+        }
+      }
+    }
+}
+.carousel-items {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    min-height: 9.5em;
+    overflow: hidden;
+
+    @media (min-width: $sm-screen) {
+      min-height: 12em;
+    }
+    @media (min-width: $md-screen) {
+      width: 70%;
+      min-height: 11.5em;
+    }
+    @media (min-width: $lg-screen) {
+      width: 60%;
+      min-height: 12.5em;
+    }
+}
+.carousel-item {
+    position: absolute;
+    left: -100%;
+    width: 25%;
+    height: 100%;
+    opacity: 0;
+    @include transition(left 1s, width 1s, opacity 500ms);
+
+    &__image {
+      height: 100%;
+
+      > svg {
+        width: 100%;
+        max-height: 100%;
+        @include transition(fill 500ms);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &--previous {
+        left: 0;
+        opacity: 1;
+    }
+    &--before-previous {
+        left: -25%;
+    }
+    &--active {
+        left: 25%;
+        width: 50%;
+        opacity: 1;
+    }
+    &--next {
+        left: 75%;
+        opacity: 1;
+    }
+    &--after-next {
+        left: 100%;
+    }
+}

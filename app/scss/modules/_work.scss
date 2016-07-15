@@ -1,0 +1,76 @@
+//-------------------------------------
+// Work
+//-------------------------------------
+
+.employer {
+  margin: 1em auto 2em;
+  padding: 1em;
+  background-color: $off-white;
+  color: $charcoal;
+  @include box-shadow(5px 5px 10px $charcoal);
+  @include flexbox();
+  @include flex-wrap(wrap);
+
+  @media (min-width: $md-screen) {
+    padding: 2em;
+  }
+  @media (min-width: $lg-screen) {
+    @include justify-content(space-between);
+    @include align-items(baseline);
+  }
+
+  &__company-name {
+    line-height: 0.9;
+    margin: 0.15em 0;
+    text-align: center;
+    @include order(1);
+    @include flex(1 0 100%);
+
+    @media(min-width: $sm-screen){
+      margin: 0 0 -0.1em;
+      text-align: left;
+    }
+  }
+
+  &__time-range {
+    margin: 0;
+    color: $charcoal;
+    text-align: center;
+    @include order(0);
+    @include flex(1 0 100%);
+
+    @media (min-width: $sm-screen) {
+      text-align: right;
+      margin-bottom: -0.15em;
+    }
+  }
+
+  &__job-title {
+    margin: 0 0 0.75em;
+    color: $dark-teal;
+    text-align: center;
+    @include flex(1 0 100%);
+    @include order(2);
+
+    @media(min-width: $sm-screen){
+      text-align: left;
+    }
+  }
+
+  &__summary {
+    margin: 0 0.5em;
+    @include order(3);
+
+    @media(min-width: $md-screen){
+      margin: 0 2em;
+    }
+
+    ul {
+      font-size: 1.25em;
+      list-style: none;
+    }
+    p {
+      margin-bottom: 0.75em;
+    }
+  }
+}

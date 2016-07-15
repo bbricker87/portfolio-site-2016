@@ -1,0 +1,15 @@
+{
+    "employers": [{
+        "companyName": "k2dsquared",
+        "companyLink": "http://k2dsquared.com",
+        "jobTitle": "Full Stack Web Developer",
+        "timeRange": "June 2015 - Present",
+        "summary": "<p>For the past year, I have assisted in or led the development of over 15+ websites, utilizing the content management system KenticoCMS</p><p style='margin-left: 1.5em;'>On the back end, I developed modules, web pages, and controls using C#/.NET, and some minor Visual Basic.<br/>On the front end, I utilized HTML5, CSS3, and Javascript, as well as numerous Javascript</p><p style='margin-bottom: 0.1em;'>Some recent clients include: </p><ul><li><a href='http://hospicefoundation.org' target='_blank'>Hospice Foundation of America</a></li><li><a href='http://archetypeusa.com' target='_blank'>Archetype USA</a></li><li><a href='http://themoneyathlete.com' target='_blank'>The Total Money Athlete</a></li></ul>"
+    }, {
+        "companyName": "Games That Move You",
+        "companyLink": "http://gamesthatmoveyou.com",
+        "jobTitle": "Game Developer",
+        "timeRange": "Aug. 2014 - Dec. 2015",
+        "summary": "<p>At Games That Move You, I aided in the development of a number of different <a href='https://www.google.com/search?q=video%20game%20based%20therapy' target='_blank'>therapy based video games</a>. These games were developed for patients with Parkinson's Disease, Muscular Dystrophy, and those who have suffered a stroke.</p><p>I was tasked with designing and developing the user interface for the games, as well as some of the back end functionality.</p><p style='margin-left: 1.5em;'>The main game developed is called <a href='http://gamesthatmoveyou.com/about' target='_blank'>Recovery Rapids</a>.<br/>Development of the games was accomplished using <a href='http://unity3d.com' target='_blank'>Unity3d</a>. <br/>The functionality of the games was developed in C#.</p>"
+    } ]
+}

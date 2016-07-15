@@ -1,7 +1,7 @@
 import React from "react";
 
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
+import Header from "./header/header";
+import Footer from "./footer/footer";
 
 export default function(props) {
   return(

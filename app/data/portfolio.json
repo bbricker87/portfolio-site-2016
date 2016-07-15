@@ -1,0 +1,42 @@
+{
+    "projects": [{
+        "id": "chm",
+        "name": "Carriage House Ministries",
+        "subtitle": "Full Site Redesign",
+        "dateRange": "May 2016 - Ongoing",
+        "url": "http://dev.ben-bricker.com/carriage-house-grav",
+        "logo": "carriage-house-logo.png",
+        "image": "carriage-house.png",
+        "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic."
+    },
+    {
+        "id": "knp",
+        "name": "Kylie Noelle Photography",
+        "subtitle": "Full Site Redesign",
+        "dateRange": "January 2016 - March 2016",
+        "url": "http://kylienoellephotography.com",
+        "logo": "knp-logo.png",
+        "image": "knp.png",
+        "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic."
+    },
+    {
+        "id": "ohio-ilg",
+        "name": "Ohio Industry Liaison Group",
+        "subtitle": "Full Site Redesign",
+        "dateRange": "December 2015",
+        "url": "http://ohioilg.org",
+        "logo": "ohio-ilg-logo.png",
+        "image": "ohio-ilg.png",
+        "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic."
+    },
+    {
+        "id": "knp4",
+        "name": "Kylie Noelle Photography",
+        "subtitle": "Full Site Redesign",
+        "dateRange": "January 2016 - March 2016",
+        "url": "http://kylienoellephotography.com",
+        "logo": "knp-logo.png",
+        "image": "knp.png",
+        "description": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic."
+    } ]
+}

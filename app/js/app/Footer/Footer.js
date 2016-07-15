@@ -22,9 +22,12 @@ export default function(props) {
           </div>
         </div>
         <div className="form col-xs-24 col-md-12">
-          <input className="form__input" type="text" placeholder="Name" />
-          <input className="form__input" type="email" placeholder="Email" />
-          <textarea className="form__input form__textarea" placeholder="Message"></textarea>
+          <label className="form__label" for="name" required>Name</label>
+          <input className="form__input" type="text" id="name" />
+          <label className="form__label" for="email">Email</label>
+          <input className="form__input" type="email" id="email" required />
+          <label className="form__label" for="message">Message</label>
+          <textarea className="form__input form__textarea" id="message" required></textarea>
           <button className="button button--primary button--form">Send</button>
         </div>
       </div>

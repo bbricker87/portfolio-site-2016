@@ -18,10 +18,6 @@ const EmployerContainer = React.createClass({
     });
   },
 
-  componentWillUnmount: function(){
-    this.serverRequest.abort();
-  },
-
   render: function() {
     return (
       <div className='container clearfix'>

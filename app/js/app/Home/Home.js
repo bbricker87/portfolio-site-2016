@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Nav from '../Nav/nav';
+import Nav from '../nav/nav';
 
 export default function(props) {
   return(

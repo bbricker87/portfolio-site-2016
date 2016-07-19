@@ -13,7 +13,17 @@
 
   &__image {
     @include border-radius(50%);
-    max-height: 50vh;
+    max-height: 18em;
+
+    @media (min-height: $md-screen) {
+      max-height: 15em;
+    }
+    @media (min-height: $xl-screen) {
+      max-height: 18em;
+    }
+    @media (min-height: $xxl-screen) {
+      max-height: 27em;
+    }
   }
 }
 
@@ -27,6 +37,10 @@
     max-width: 12.5rem;
     fill: $off-white;
     @include transition(fill 500ms);
+
+    @media (min-width: $xxl-screen) {
+      max-width: 20rem;
+    }
   }
 
   &__title {

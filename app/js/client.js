@@ -14,7 +14,7 @@ const appRoot = document.getElementById('root');
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={MainLayout}>
-      <IndexRoute title="Home" component={Skills} />
+      <IndexRoute title="Home" component={Home} />
       <Route path="/About" title="About" component={About} />
       <Route path="/Work" title="Work" component={Work} />
       <Route path="/Skills" title="Skills" component={Skills} />

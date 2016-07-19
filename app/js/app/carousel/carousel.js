@@ -45,7 +45,7 @@ const Carousel = React.createClass({
           <div className="carousel-item__image">
             <svg viewBox="0 0 128 128" fill={fill} dangerouslySetInnerHTML={ {__html: carouselItem.svgPath } }>
             </svg>
-          </div>
+          </div>          
         </div>
       );
     }

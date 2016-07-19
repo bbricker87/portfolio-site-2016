@@ -5,13 +5,35 @@
 .nav {
   @include flexbox();
   list-style: none;
+  margin: 0;
 
   &--home {
     @include justify-content(space-between);
     @include flex-wrap(wrap);
+    margin: 0 auto 2em;
 
     @media (min-width: $md-screen){
       @include flex-wrap(no-wrap);
+    }
+  }
+
+  &--default {
+    @include flex-direction(column);
+    font-size: 2em;
+    text-transform: uppercase;
+    @include header-font();
+    background-color: $off-white;
+    @include box-shadow(inset 0 15px 15px -10px $charcoal, inset 0 -15px 15px -10px $charcoal)
+    padding: 0.5em 0;
+
+    @media (min-width: $md-screen) {
+      font-size: 4em;
+    }
+    @media (min-width: $xl-screen) {
+      font-size: 5em;
+    }
+    @media (min-width: $xxl-screen) {
+      font-size: 6em;
     }
   }
 
@@ -26,6 +48,19 @@
       }
       @media (min-width: $lg-screen){
         @include flex(1 0 25%);
+      }
+    }
+    &--default {
+      @include transition(background-color 500ms);
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        background-color: $white;
       }
     }
   }

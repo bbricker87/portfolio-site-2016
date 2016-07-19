@@ -9,13 +9,30 @@ body {
 .header-container {
   position: relative;
   margin: 0;
-  padding: 0.5em 0;
+  padding: 0.5em 0 0;
   background-color: $dark-teal;
 
   @media(min-width: $md-screen) {
-    height: 6em;
     padding: 0;
     background: transparent;
+    @include transition(background-color 800ms);
+  }
+
+  &--open {
+    @media(min-width: $md-screen) {
+      background-color: $dark-teal;
+
+      .header__title--page {
+        color: $orange;
+
+        &:hover {
+          color: $light-orange;
+        }
+      }
+      .header__title--site {
+        right: -4em;
+      }
+    }
   }
 }
 
@@ -23,11 +40,25 @@ body {
   position: relative;
   text-align: center;
 
+  @media(min-width: $md-screen) {
+    height: 5em;
+  }
+  @media(min-width: $lg-screen) {
+    height: 5.5em;
+  }
+  @media(min-width: $xl-screen) {
+    height: 6.25em;
+  }
+  @media(min-width: $xxl-screen) {
+    height: 8.75em;
+  }
+
   &__title {
 
     color: $orange;
     margin: 0;
     line-height: 0.85;
+    @include transition(color 250ms);
 
         @media(min-width: $md-screen) {
           position: absolute;
@@ -39,8 +70,15 @@ body {
 
 
     &--page {
+      &:hover {
+        color: $light-orange;
+        cursor: pointer;
+      }
 
         @media(min-width: $md-screen) {
+          &:hover {
+            color: $medium-grey;
+          }
           top: -0.33em;
           left: 0;
           font-size: 7.5em;
@@ -56,16 +94,18 @@ body {
         }
     }
     &--site {
-
+      margin-bottom: 0.2em;
       color: $tan;
 
       @media(min-width: $md-screen) {
+        margin-bottom: 0;
         color: $dark-teal;
         line-height: 0;
         top: 2.4em;
         right: -2.125em;
         font-size: 4em;
         @include transform(rotate(-90deg));
+        @include transition(right 800ms ease-in-out);
       }
       @media(min-width: $lg-screen) {
         font-size: 5em;
@@ -77,5 +117,15 @@ body {
         font-size: 7.75em;
       }
     }
+  }
+}
+
+.header-nav-container {
+  max-height: 0;
+  overflow: hidden;
+  @include transition(max-height 800ms cubic-bezier(0.38, 0.01, 0.59, 0.99));
+
+  &--open {
+    max-height: 60em;
   }
 }

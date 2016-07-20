@@ -30,6 +30,7 @@
     "react-dom": "^15.1.0",
     "react-motion": "^0.4.4",
     "react-router": "^2.5.1",
+    "react-router-transition": "0.0.5",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",

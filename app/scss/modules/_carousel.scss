@@ -57,6 +57,10 @@
       width: 60%;
       min-height: 12.5em;
     }
+    @media (min-width: $xxl-screen) {
+      width: 60%;
+      min-height: 17.5em;
+    }
 }
 .carousel-item {
     position: absolute;

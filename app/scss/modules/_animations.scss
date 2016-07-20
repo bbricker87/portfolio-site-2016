@@ -1,0 +1,39 @@
+//-------------------------------------
+// Animations
+//-------------------------------------
+
+&.slide-element-enter {
+
+}
+&.slide-element-enter.slide-element-enter-active {
+    @include transition(transform 800ms);
+    @include transform(translateX(50em));
+}
+&.slide-element-leave {
+
+}
+&.slide-element-leave.slide-element-leave-active {
+    @include transition(transform 800ms);
+    @include transform(translateX(-50em));
+}
+
+.route {
+
+  &__transition {
+    position: relative;
+
+    > div {
+      position: absolute;
+      width: 100%;
+      margin-top: -1em;
+
+      @media (min-width: $md-screen) {
+        margin-top: -2em;
+      }
+    }
+  }
+
+  &__placeholder {
+    opacity: 0;
+  }
+}

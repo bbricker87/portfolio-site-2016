@@ -1,131 +1,163 @@
 //-------------------------------------
 // Header
 //-------------------------------------
-
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
-
 .header-container {
-  position: relative;
-  margin: 0;
-  padding: 0.5em 0 0;
-  background-color: $dark-teal;
-
-  @media(min-width: $md-screen) {
-    padding: 0;
-    background: transparent;
-    @include transition(background-color 800ms);
-  }
-
-  &--open {
-    @media(min-width: $md-screen) {
-      background-color: $dark-teal;
-
-      .header__title--page {
-        color: $orange;
-
-        &:hover {
-          color: $light-orange;
-        }
-      }
-      .header__title--site {
-        right: -4em;
-      }
-    }
-  }
-}
-
-.header {
-  position: relative;
-  text-align: center;
-
-  @media(min-width: $md-screen) {
-    height: 5em;
-  }
-  @media(min-width: $lg-screen) {
-    height: 5.5em;
-  }
-  @media(min-width: $xl-screen) {
-    height: 6.25em;
-  }
-  @media(min-width: $xxl-screen) {
-    height: 8.75em;
-  }
-
-  &__title {
-
-    color: $orange;
+    position: relative;
     margin: 0;
-    line-height: 0.85;
-    @include transition(color 250ms);
-
+    padding: 0.5em 0 0;
+    background-color: $dark-teal;
+    @media(min-width: $md-screen) {
+        padding: 0;
+        background: transparent;
+        @include transition(background-color 800ms);
+    }
+    &--open {
         @media(min-width: $md-screen) {
-          position: absolute;
-          color: $dark-teal;
-          text-transform: uppercase;
-          margin: 0;
-          line-height: inherit;
-        }
-
-
-    &--page {
-      &:hover {
-        color: $light-orange;
-        cursor: pointer;
-      }
-
-        @media(min-width: $md-screen) {
-          &:hover {
-            color: $medium-grey;
-          }
-          top: -0.33em;
-          left: 0;
-          font-size: 7.5em;
-        }
-        @media(min-width: $lg-screen) {
-          font-size: 8em;
-        }
-        @media(min-width: $xl-screen) {
-          font-size: 10em;
-        }
-        @media(min-width: $xxl-screen) {
-          font-size: 14em;
+            background-color: $dark-teal;
+            .header__title--page {
+                color: $orange;
+                &:hover {
+                    color: $light-orange;
+                }
+            }
+            .header__title--site {
+                right: -4em;
+            }
         }
     }
-    &--site {
-      margin-bottom: 0.2em;
-      color: $tan;
-
-      @media(min-width: $md-screen) {
-        margin-bottom: 0;
-        color: $dark-teal;
-        line-height: 0;
-        top: 2.4em;
-        right: -2.125em;
-        font-size: 4em;
-        @include transform(rotate(-90deg));
-        @include transition(right 800ms ease-in-out);
-      }
-      @media(min-width: $lg-screen) {
-        font-size: 5em;
-      }
-      @media(min-width: $xl-screen) {
-        font-size: 5.75em;
-      }
-      @media(min-width: $xxl-screen) {
-        font-size: 7.75em;
-      }
-    }
-  }
 }
+.header {
+    position: relative;
+    text-align: center;
+    @media(min-width: $md-screen) {
+        height: 5em;
+    }
+    @media(min-width: $lg-screen) {
+        height: 5.5em;
+    }
+    @media(min-width: $xl-screen) {
+        height: 6.25em;
+    }
+    @media(min-width: $xxl-screen) {
+        height: 8.75em;
+    }
+    &__title {
+        color: $orange;
+        margin: 0;
+        line-height: 0.85;
+        @include transition(color 250ms);
+        @media(min-width: $md-screen) {
+            position: absolute;
+            color: $dark-teal;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: inherit;
+        }
+        &--page {
+            height: 0.85em;
+            position: relative;
+            overflow: hidden;
 
+            &:hover {
+                color: $light-orange;
+                cursor: pointer;
+            }
+            @media(min-width: $md-screen) {
+                &:hover {
+                    color: $medium-grey;
+                }
+                top: -0.33em;
+                left: 0;
+                font-size: 7.5em;
+                height: 1em;
+            }
+            @media(min-width: $lg-screen) {
+                font-size: 8em;
+                height: 1.02em;
+            }
+            @media(min-width: $xl-screen) {
+                font-size: 10em;
+                height: 0.95em;
+            }
+            @media(min-width: $xxl-screen) {
+                font-size: 14em;
+            }
+        }
+        &--site {
+            margin-bottom: 0.2em;
+            color: $tan;
+            @media(min-width: $md-screen) {
+                margin-bottom: 0;
+                color: $dark-teal;
+                line-height: 0;
+                top: 2.4em;
+                right: -2.125em;
+                font-size: 4em;
+                @include transform(rotate(-90deg));
+                @include transition(right 800ms ease-in-out);
+            }
+            @media(min-width: $lg-screen) {
+                font-size: 5em;
+            }
+            @media(min-width: $xl-screen) {
+                font-size: 5.75em;
+            }
+            @media(min-width: $xxl-screen) {
+                font-size: 7.75em;
+            }
+        }
+    }
+}
 .header-nav-container {
-  max-height: 0;
-  overflow: hidden;
-  @include transition(max-height 800ms cubic-bezier(0.38, 0.01, 0.59, 0.99));
+    max-height: 0;
+    overflow: hidden;
+    @include transition(max-height 800ms cubic-bezier(0.38, 0.01, 0.59, 0.99));
+    &--open {
+        max-height: 60em;
+    }
+}
+.title {
+    @include flexbox;
+    @include justify-content(center);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 
-  &--open {
-    max-height: 60em;
-  }
+    @media (min-width: $md-screen) {
+      @include justify-content(flex-start);
+    }
+
+    &.title-change-enter, &.title-change-appear {
+        .title__character {
+            margin-top: -1em;
+        }
+    }
+    &.title-change-enter.title-change-enter-active, &.title-change-appear.title-change-appear-active {
+        .title__character {
+            margin-top: 0;
+        }
+    }
+    &.title-change-leave {
+        .title__character {
+            margin-top: 0;
+        }
+    }
+    &.title-change-leave.title-change-leave-active {
+        .title__character {
+            margin-top: 1em;
+        }
+    }
+    &__character {
+        display: block;
+        @for $i from 0 through 10 {
+            &--#{$i}) {
+                transition: margin-top (($i + 1) * 200ms);
+                //left: ($i * 0.5em);
+            }
+        }
+    }
 }
